@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after{
+    padding: 50;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0a0a0a;
+}
+nav{
+    height: 10vh;
+    cursor: pointer;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    z-index: 9999;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    color: #a0a0a0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(51, 133, 51);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+a:hover{
+    color: rgb(255, 255, 255);
+}
+a:hover:after{
+    width: 100%;
+}
+
+.title{
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 55px;
+    text-align: center;
+}

@@ -1,0 +1,134 @@
+/* General resets */
+*,
+*:before,
+*:after {
+    padding: 0; /* Reset padding */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+}
+
+nav {
+    height: 10vh;
+    cursor: pointer;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    z-index: 9999;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #a0a0a0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(51, 133, 51);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 45px;
+    letter-spacing: 5px;
+    padding-top: 15px;
+    transition: color 1s;
+}
+
+.title:hover {
+    color: #0a0a0a;
+    transition: 5s;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+.subsubtitle {
+    text-align: center;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.paragraph {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22.5px;
+    padding-left: 240px;
+    padding-right: 220px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+figcaption {
+    color: rgb(122, 122, 122);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    padding-top: 30px;
+    transition: color 0.5s;
+}
+
+figcaption:hover {
+    color: white;
+}
+
+/* Smooth transitions for image sizes */
+#pic {
+    width: 300px; /* Set an initial width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 35px; /* Initial border-radius */
+    transition: width 1s ease, height 1s ease, border-radius 1s ease;
+}
+
+#pic:hover {
+    width: 350px; /* Target width on hover */
+    border-radius: 0px; /* Target border-radius on hover */
+}
+
+#pic:active {
+    width: 500px; /* Width when the image is active/clicked */
+    border-radius: 0px; /* Border-radius when the image is active */
+}
